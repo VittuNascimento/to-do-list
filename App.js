@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import Task from "./src/components/Task"; //chamei o component
 import Adicionar from './src/components/Adicionar';
-import InputTask from './src/components/InputTask';
+
 
 
 export default function App() {
