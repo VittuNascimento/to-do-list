@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
-import Task from "./components/Task"; //chamei o component
-import Adicionar from './components/Adicionar';
+import Task from "./src/components/Task"; //chamei o component
+import Adicionar from './src/components/Adicionar';
+import InputTask from './src/components/InputTask';
+
 
 export default function App() {
   return (
