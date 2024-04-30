@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
 import Task from "./components/Task"; //chamei o component
+import Adicionar from './components/Adicionar';
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
           <Task text={"Estudar programação"} />
           <Task text={"Correr na praia"} />
           <Task text={"Ler livro :codigo limpo"} />
+          <View>
+            <Adicionar text = {"Adicionar"}/>
+          </View>
         </View>
       </View>
     </View>
