@@ -1,47 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from "react-native";
+import Home from './src/screens/Home';
+import NovaTask from "./src/screens/NovaTask";
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Task from "./src/components/Task"; //chamei o component
-import Adicionar from './src/components/Adicionar';
 
+const Stack = createNativeStackNavigator();
 
-
-export default function App() {
+function  App() {
   return (
-    <View style={styles.container}>  
-      <View style={styles.taskbox}>
-        <Text style={styles.tituloSecao}> Atividade Diária</Text> 
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName = 'Home'>
+      <Stack.Screen
+       name="Home"
+       component = {Home}
+       options={{headerShown: 'false'}}  
+       />
 
-        <View style={styles.items}>
-          <Task text={"Passear com cachorro"} /> 
-          <Task text={"Estudar programação"} />
-          <Task text={"Correr na praia"} />
-          <Task text={"Ler livro :codigo limpo"} />
-          <View>
-            <Adicionar text = {"Adicionar"}/>
-          </View>
-        </View>
-      </View>
-    </View>
-  );
+      <Stack.Screen 
+      name= 'NovaTask' 
+      component = {NovaTask}
+      options={{headerShown: 'false'}}
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#dfdfdf",
-  },
-
-  tituloSecao: {
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-  taskbox: {
-    paddingTop: 80,
-    paddingHorizontal: 20,
-  },
-
-  items: {
-    marginTop: 30,
-  },
-});
+export default App;

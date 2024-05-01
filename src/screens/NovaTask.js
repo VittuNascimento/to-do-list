@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet} from "react-native";
 import InputTask from "../components/InputTask";
 
 
-export default function NovaTask (){
+ function NovaTask (){
   return (
     <View>
       <Text style = {styles.tituloSecao}>NovaTask</Text>
@@ -26,3 +26,4 @@ const styles = StyleSheet.create({
   },
 
 });
+export default NovaTask;
